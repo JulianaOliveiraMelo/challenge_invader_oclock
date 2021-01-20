@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#invader {
+    display: flex;
+    flex-direction: column;
+    background-color: #3c40c6;
+    /* calc permet de calculer une taille issue de plusieurs unités */
+    min-height: calc(100vh - 150px);
+    align-items: center;
+    justify-content: center;
+}
+
+/* convention BEM : row est un element du block grid */
+.grid__row {
+    display: flex;
+}
+
+/* convention BEM : pixel est aussi un element du block grid */
+.grid__pixel {
+    background-color: lightgray;
+    border: 2px solid darkgray;
+}
+
+.palette__color--plain, .grid__pixel--plain {
+    background-color: #d2dae2;
+    border-color: #808e9b;
+}
+
+.palette__color--empty, .grid__pixel--empty {
+    background-color: #485460;
+    border-color: #1e272e;
+}
+
+.palette__color--light, .grid__pixel--light {
+    background-color: #ffc048;
+    border-color: #ffa801;
+}
+
+.palette__color--highlight, .grid__pixel--highlight {
+    background-color: #0be881;
+    border-color: #05c46b;
+}
+
+.palette__color--bright, .grid__pixel--bright {
+    background-color: #fb2881;
+    border-color: #f5046b;
+}
+
+/* formulaire */
+
+.configuration {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272bad;
+}
+
+.configuration input {
+    padding: 1em;
+    border: 0;
+    font-size: 1.2em;
+    width: 10em;
+    margin-right: 2px;
+}
+
+.configuration input:first-child {
+    border-radius: .5em 0 0 .5em;
+}
+
+.configuration button {
+    padding: 1em;
+    border: 0;
+    font-size: 1.2em;
+    color: #fff;
+    background: #9957e4;
+    border-radius:0 .5em .5em 0;
+}
+
+/* palette */
+
+.palette {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    background:rgba(0,0,0,.2);
+    padding: .5em;
+}
+
+.palette__color {
+    margin: .5em;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+}
